@@ -91,24 +91,7 @@ const progress = (answeredQuestions * 100) / totalQuestions;
           >
             {getFormattedTime(TimeTaken)}
           </h6>
-          {/* <div
-            className="progress"
-            style={{ width: "100%", height: "8px", marginBottom: "20px" }}
-            role="progressbar"
-            aria-valuenow={progress}
-            aria-valuemin="0"
-            aria-valuemax="100"
-          >
-            <div
-              className="progress-bar bg-success"
-              style={{
-                width: `${progress}%`,
-                transition: "width 0.5s ease-in-out",
-              }}
-            ></div>
-          </div> */}
-
-          {/* IMAGE */}
+        
           {Qns[QnIndex].qnImage && (
             <img
               src={"http://localhost:5012/Images/mouse.jpeg"}
@@ -117,11 +100,9 @@ const progress = (answeredQuestions * 100) / totalQuestions;
             />
           )}
 
-          {/* QUESTION */}
           <p className="card-text">{Qns[QnIndex].qnInWords}</p>
         </div>
 
-        {/* OPTIONS */}
         <ol style={{ listStyleType: "none", paddingLeft: 0, margin: 0 }}>
           {Qns[QnIndex].options.map((item, index) => (
             <li key={index} style={{ padding: "10px 15px", textAlign: "left" }}>

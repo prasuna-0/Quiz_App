@@ -20,14 +20,12 @@ namespace QuizAPI.Controllers
             _context = context;
         }
 
-        // GET: api/Participants
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Participant>>> GetParticipants()
         {
             return await _context.Participants.ToListAsync();
         }
 
-        // GET: api/Participants/5
         [HttpGet("{id}")]
         public async Task<ActionResult<Participant>> GetParticipant(string id)
         {
@@ -41,8 +39,7 @@ namespace QuizAPI.Controllers
             return participant;
         }
 
-        // PUT: api/Participants/5
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
+        
         [HttpPut("{id}")]
         public async Task<IActionResult> PutParticipant(string id, ParticipantResult _participantresult)
         {
@@ -84,8 +81,7 @@ namespace QuizAPI.Controllers
             return Ok(participant);
         }
 
-        // POST: api/Participants
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
+        
         [HttpPost]
         public async Task<ActionResult<Participant>> PostParticipant(Participant participant)
         {
@@ -111,7 +107,6 @@ namespace QuizAPI.Controllers
             return Ok(participant);
         }
 
-        // DELETE: api/Participants/5
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteParticipant(string id)
         {

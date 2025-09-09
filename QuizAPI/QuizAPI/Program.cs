@@ -26,12 +26,6 @@ builder.Services.AddDbContext<QuizDbContext>(options =>
 
 var app = builder.Build();
 app.UseCors("AllowReactApp");
-//app.UseCors(options =>
-//options.WithOrigins("http://localhost:3000")
-//.AllowAnyMethod()
-//.AllowAnyOrigin()
-//.AllowAnyHeader()
-//);
 app.UseStaticFiles(new StaticFileOptions
 {
     FileProvider = new PhysicalFileProvider(

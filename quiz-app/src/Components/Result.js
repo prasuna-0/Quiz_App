@@ -74,7 +74,6 @@ export default function Result() {
     <div className="card text-bg-dark mb-3" style={{ maxWidth: "480px" }}>
       <div className="row g-0">
         <div className="col-md-8">
-          {/* Make card-body flex column so flexGrow works */}
           <div
             className="card-body d-flex flex-column"
             style={{ minHeight: "300px" }}
